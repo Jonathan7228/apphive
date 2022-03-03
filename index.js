@@ -18,7 +18,6 @@ const renderComponents = (...components) => {
 const useState = (initialState) => {
   // [MODIFICATION ALLOWED]
 
-
   const setter = (toSetValue) => {
     let res = toSetValue(0);
     if(res < 0) stackPointer += 1;
@@ -31,8 +30,6 @@ const useState = (initialState) => {
   }
 
   return [stateStack[stackPointer] || initialState, setter]
-
-
   // [MODIFICATION ALLOWED]
 }
 
